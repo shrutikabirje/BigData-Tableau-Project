@@ -12,7 +12,7 @@ Steps for creating CFT:
 
 4.AWS CloudFormation constructs and configures the stack resources that you have specified in your template.
 
-
+```
 
 {
   "AWSTemplateFormatVersion": "2010-09-09",
@@ -184,3 +184,5 @@ Steps for creating CFT:
 	 
   }
 }
+
+```
