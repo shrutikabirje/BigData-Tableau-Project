@@ -1,3 +1,8 @@
+# This py script imports clean data from S3 and creates a table in HIVE.
+
+## Command to run script: 
+spark-submit --conf spark.sql.catalogImplementation=hive us_accidents.py(script name)
+
 import pyspark
 
 from pyspark.sql.functions import *
@@ -14,7 +19,6 @@ sqlContext = SQLContext(sc)
 spark = SparkSession.builder.master("local").appName("app name").config("spark.some.config.option", 'true').getOrCreate()
 
 df = spark.read.parquet("s3://us-accidents-output/output/clean.parquet/")
-
 
 df.createOrReplaceTempView("final_data")
 sqlContext.sql("create table us_accidents select * from final_data")
