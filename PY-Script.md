@@ -3,6 +3,8 @@
 ## Command to run script: 
 spark-submit --conf spark.sql.catalogImplementation=hive us_accidents.py(script name)
 
+# us_accidents.py script
+
 import pyspark
 
 from pyspark.sql.functions import *
