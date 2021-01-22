@@ -1,3 +1,15 @@
+AWS CloudFormation provides users with a simple way to create and manage a collection of Amazon Web Services (AWS) resources by provisioning and updating them in a predictable way. AWS CloudFormation enables you to manage your complete infrastructure or AWS resources in a text file.
+
+In simple terms, it allows you to create and model your infrastructure and applications without having to perform actions manually.
+
+Steps for creating CFT:
+
+1.Create a new template or use an existing CloudFormation template using the JSON or YAML format.
+2.Save your code template locally or in an S3 bucket.
+3.Use AWS CloudFormation to build a stack on your template.
+4.AWS CloudFormation constructs and configures the stack resources that you have specified in your template.
+
+
 {
   "AWSTemplateFormatVersion": "2010-09-09",
   "Parameters" : {
