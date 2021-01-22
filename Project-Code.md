@@ -1,5 +1,5 @@
 # LINKS
-=======
+
 https://smoosavi.org/datasets/us_accidents
 
 https://sparkbyexamples.com/pyspark/pyspark-split-dataframe-column-into-multiple-columns/
@@ -9,7 +9,6 @@ https://blog.clairvoyantsoft.com/big-data-file-formats-3fb659903271
 ## not required this command## df = spark.read.csv("ProjectData/US_Accidents_June20.csv")
 
 # FEATURES
-==========
 
 ID: This is a unique identifier of the accident record.
 
@@ -80,7 +79,7 @@ Traffic_Signal: A POI annotation which indicates presence of traffic_signal in a
 Sunrise_Sunset: Shows the period of day (i.e. day or night) based on sunrise/sunset.
 
 # STEPS
-=======
+
 STEP 1:
 s3 to hdfs data ingestion ::
 
@@ -97,7 +96,6 @@ df.printSchema()
 
 
 # Rename a column name
-======================
 
 df=df.withColumnRenamed("Distance(mi)","Distance")
 
@@ -117,7 +115,6 @@ df=df.withColumnRenamed("Precipitation(in)","Precipitation")
 
 
 # Drop column which is not required
-===================================
 
 df = df.drop("TMC","Source","End_Lat","End_Lng","Number","County","Precipitation")
 
@@ -127,7 +124,6 @@ df.describe().show()
 
 
 #Now Replace NaN values with mean on some features
-===================================================
 
 from pyspark.sql.functions import mean
 
@@ -138,7 +134,6 @@ clean_df.na.fill(mean_press,subset=['Pressure']).show()
 
 
 # Store this dataframe into Hive Table
-======================================
 
 df.createOrReplaceTempView("us_accident")
 
@@ -164,7 +159,6 @@ df.select('Time).show(20)
 
 
 # Write dataframe in Parquet directly to S3
-===========================================
 
 df.write.parquet('/user/hadoop/us_accidents')
 "s3://us-accidents-output/output/clean.parquet"
