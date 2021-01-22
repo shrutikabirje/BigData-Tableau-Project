@@ -2,15 +2,15 @@
 
 ## Loading Data
 
-Step1:Download the jar_files.zip 
+### Step1:Download the jar_files.zip 
 
-step2:unzip the file
+### step2:unzip the file
 
-step3:sudo cp mysql-connector-java-5.1.49.jar /lib/spark/jars/
+### step3:sudo cp mysql-connector-java-5.1.49.jar /lib/spark/jars/
 
-step4:go to pyspark
+### step4:go to pyspark
 
-step5:establish the connection
+### step5:establish the connection
 
 from  pyspark.sql import SparkSession
 
@@ -36,11 +36,11 @@ connectionProperties = {
    "password" : password
 }
 
-step6:read the csv file 
+### step6:read the csv file 
 
 df=spark.read.jdbc(url=jdbc_url,table='project',properties= connectionProperties)
 
-step7:show the records
+### step7:show the records
 
 df.show()
 
