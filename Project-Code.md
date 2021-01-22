@@ -6,7 +6,6 @@ https://sparkbyexamples.com/pyspark/pyspark-split-dataframe-column-into-multiple
 
 https://blog.clairvoyantsoft.com/big-data-file-formats-3fb659903271
 
-## not required this command## df = spark.read.csv("ProjectData/US_Accidents_June20.csv")
 
 # FEATURES
 
