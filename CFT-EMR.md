@@ -5,9 +5,13 @@ In simple terms, it allows you to create and model your infrastructure and appli
 Steps for creating CFT:
 
 1.Create a new template or use an existing CloudFormation template using the JSON or YAML format.
+
 2.Save your code template locally or in an S3 bucket.
+
 3.Use AWS CloudFormation to build a stack on your template.
+
 4.AWS CloudFormation constructs and configures the stack resources that you have specified in your template.
+
 
 
 {
